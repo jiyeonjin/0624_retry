@@ -138,7 +138,7 @@ Google Colab에서 작업한 내용을 GitHub 저장소에 직접 저장할 수 
 ___
 
 ## 2. About Python3
-- [Python basic](./docs/python3.md)
+- [Python basic](docs/python.md)
 
 ## 3.  data structure / data sciencs
 
