@@ -139,6 +139,7 @@ ___
 
 ## 2. About Python3
 - [Python basic](docs/python.md)
+- https://docs.google.com/document/d/19VkSDEzg3EgwLROp6Z0-3Bdayx0T_X4vmB3hQZFbOxY/edit?tab=t.0#heading=h.xznvs0glpxkj
 
 ## 3. Data Structure / Data Science
 - [데이터 구조 개요](docs/data_structures.md)
