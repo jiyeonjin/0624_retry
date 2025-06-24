@@ -140,46 +140,80 @@ ___
 ## 2. About Python3
 - [Python basic](docs/python.md)
 
-## 3.  data structure / data sciencs
-
-- [데이터 구조 개요](./data_structures.md)
-- [Pandas](./pandas.md)
-- [Numpy](./numpy.md)
-- [Matplotlib](./Matplotlib.md)
+## 3. Data Structure / Data Science
+- [데이터 구조 개요](docs/data_structures.md)
+- [Pandas](docs/pandas.md)
+- [Numpy](docs/numpy.md)
+- [Matplotlib](docs/Matplotlib.md)
 
 ## 4. Machine Learning
-
-- [Machine Learning Basic](./ml_basic.md)
-- [모델 훈련 및 평가](./ml_test.md)
+- [Machine Learning Basic](docs/ml_basic.md)
+- [모델 훈련 및 평가](docs/ml_test.md)
 
 ## 5. OpenCV
+- [OpenCV Basic](docs/OpenCV_basic.md)
+- [이미지 처리](docs/image_test.md)
 
-- [OpenCV Basic](./OpenCV_basic.md)
-- [이미지 처리](./image_test.md)
-
-  
-## 6. CNN(Convolution Neural Network
-- [CNN_Basic](./CNN_basic.md)
-- [CNN_자율주행 관련 코드](./cnn_test.md)
+## 6. CNN (Convolution Neural Network)
+- [CNN_Basic](docs/CNN_basic.md)
+- [CNN_자율주행 관련 코드](docs/cnn_test.md)
 
 ## 7. Ultralytics
-- [Ultralytics_Basic](./Ultralytics_basic.md)
-- [YOLOv8](./YOLOv8_test.md)
-- [YOLOv12](./YOLOv12_test.md)
-  
+- [Ultralytics_Basic](docs/Ultralytics_basic.md)
+- [YOLOv8](docs/YOLOv8_test.md)
+- [YOLOv12](docs/YOLOv12_test.md)
+
 ## 8. TensorRT vs PyTorch 
-- [PyTorch_Basic](./PyTorch_basic.md)
-- [TensorRT](./TensorRT_test.md)
-- [YOLOv12](./YOLOv12_test.md)
+- [PyTorch_Basic](docs/PyTorch_basic.md)
+- [TensorRT](docs/TensorRT_test.md)
+- [YOLOv12](docs/YOLOv12_test.md)
 
 ## 9. TAO Toolkit on RunPod
-- [TAO_사용법](.TAO_install.md)
-- [TAO_Toolkit](.TAO_Toolkit.md)
+- [TAO_사용법](docs/TAO_install.md)
+- [TAO_Toolkit](docs/TAO_Toolkit.md)
 
 ## 10. 칼만필터, CARLA, 경로 알고리즘
-- [kalman](.kalman.md)
-- [CARLA_simulator](.CARLA.md)
+- [kalman](docs/kalman.md)
+- [CARLA_simulator](docs/CARLA.md)
 
 ## 11. ADAS & (ADAS TensorRT vs PyTorch)
-- [adas_basic](.adas_basic.md)
-- [TensorRT vs PyTorch 비교](.vs.md)
+- [adas_basic](docs/adas_basic.md)
+- [TensorRT vs PyTorch 비교](docs/vs.md)
+
+---
+
+<details>
+<summary>📁 <b>docs 폴더와 빈 .md 파일 자동 생성하기 (Python 스크립트)</b></summary>
+
+```python
+# Python 스크립트: docs 폴더 안에 필요한 .md 파일 자동 생성
+import os
+
+# 만들 폴더 이름
+folder_name = "docs"
+
+# 생성할 .md 파일 목록
+file_names = [
+    "python.md",
+    "data_structures.md", "pandas.md", "numpy.md", "Matplotlib.md",
+    "ml_basic.md", "ml_test.md",
+    "OpenCV_basic.md", "image_test.md",
+    "CNN_basic.md", "cnn_test.md",
+    "Ultralytics_basic.md", "YOLOv8_test.md", "YOLOv12_test.md",
+    "PyTorch_basic.md", "TensorRT_test.md",
+    "TAO_install.md", "TAO_Toolkit.md",
+    "kalman.md", "CARLA.md",
+    "adas_basic.md", "vs.md"
+]
+
+# docs 폴더 생성
+os.makedirs(folder_name, exist_ok=True)
+
+# 각 파일 생성
+for name in file_names:
+    file_path = os.path.join(folder_name, name)
+    with open(file_path, 'w', encoding='utf-8') as f:
+        f.write(f"# {name.replace('.md','').replace('_', ' ').title()}\n\n_This is a placeholder file._")
+
+print("✅ docs 폴더와 .md 파일들이 생성되었습니다!")
+
